@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\GuestbookController;
+
+Route::get('/', [GuestbookController::class, 'index'])->name('guestbook.index');
+Route::post('/', [GuestbookController::class, 'store'])->name('guestbook.store');
