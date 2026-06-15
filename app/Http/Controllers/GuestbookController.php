@@ -10,7 +10,7 @@ class GuestbookController extends Controller
 {
     public function index()
     {
-        $guestbooks = Guestbook::whereDate('created_at', now()->toDateString())->latest()->paginate(10);
+        $guestbooks = Guestbook::whereDate('created_at', now()->toDateString())->latest()->get();
         return view('guestbook.index', compact('guestbooks'));
     }
 

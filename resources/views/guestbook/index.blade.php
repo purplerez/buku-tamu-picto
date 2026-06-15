@@ -355,10 +355,6 @@
                     </div>
                 @endforelse
             </div>
-            
-            <div style="margin-top: 1rem;">
-                {{ $guestbooks->links('pagination::bootstrap-4') }}
-            </div>
         </div>
     </div>
 </body>

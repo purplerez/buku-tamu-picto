@@ -58,36 +58,32 @@
 <body>
     <div class="header">
         <h1>Pictografest - Laporan Buku Tamu</h1>
-        <p>Rekapitulasi Pengunjung Harian</p>
+        <p>Daftar Pengunjung pada Tanggal: <strong>{{ \Carbon\Carbon::parse($date)->translatedFormat('l, d F Y') }}</strong></p>
     </div>
 
     <table>
         <thead>
             <tr>
-                <th width="10%">No</th>
-                <th width="60%">Tanggal</th>
-                <th width="30%">Jumlah Pengunjung</th>
+                <th width="5%">No</th>
+                <th width="30%">Nama Lengkap</th>
+                <th width="25%">Asal Sekolah / Unit Kerja</th>
+                <th width="40%">Alamat</th>
             </tr>
         </thead>
         <tbody>
-            @php $grandTotal = 0; @endphp
-            @foreach($dailyRecaps as $index => $recap)
-                @php $grandTotal += $recap->total; @endphp
+            @foreach($guests as $index => $guest)
                 <tr>
                     <td>{{ $index + 1 }}</td>
-                    <td>{{ \Carbon\Carbon::parse($recap->date)->translatedFormat('l, d F Y') }}</td>
-                    <td>{{ $recap->total }} Orang</td>
+                    <td>{{ $guest->nama }}</td>
+                    <td>{{ $guest->asal_sekolah }}</td>
+                    <td>{{ $guest->alamat }}</td>
                 </tr>
             @endforeach
-            <tr>
-                <td colspan="2" class="total-cell">Total Keseluruhan</td>
-                <td><strong>{{ $grandTotal }} Orang</strong></td>
-            </tr>
         </tbody>
     </table>
 
     <div class="footer">
-        Dicetak pada: {{ \Carbon\Carbon::now()->translatedFormat('d F Y H:i:s') }}
+        Total Pengunjung: {{ count($guests) }} Orang | Dicetak pada: {{ \Carbon\Carbon::now()->translatedFormat('d F Y H:i:s') }}
     </div>
 </body>
 </html>
