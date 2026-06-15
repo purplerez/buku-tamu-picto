@@ -290,7 +290,7 @@
 </head>
 <body>
     <header>
-        <h1>Buku Tamu Pictografest (</h1>
+        <h1>Buku Tamu Pictografest 8</h1>
         <p class="subtitle">Silakan isi data diri Anda untuk mengisi buku tamu</p>
     </header>
 
