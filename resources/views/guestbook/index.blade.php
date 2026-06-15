@@ -236,11 +236,61 @@
         .guest-card:nth-child(3) { animation-delay: 0.3s; }
         .guest-card:nth-child(4) { animation-delay: 0.4s; }
         .guest-card:nth-child(5) { animation-delay: 0.5s; }
+
+        /* Pagination Styles */
+        .pagination {
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+            justify-content: center;
+            margin-top: 1.5rem;
+            gap: 0.25rem;
+        }
+
+        .page-item .page-link {
+            position: relative;
+            display: block;
+            padding: 0.5rem 0.75rem;
+            margin-left: -1px;
+            line-height: 1.25;
+            color: #fde047;
+            background-color: rgba(69, 10, 10, 0.6);
+            border: 1px solid rgba(253, 230, 138, 0.2);
+            border-radius: 0.25rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .page-item.active .page-link {
+            z-index: 3;
+            color: #450a0a;
+            background-color: var(--primary);
+            border-color: var(--primary);
+            font-weight: 600;
+        }
+
+        .page-item.disabled .page-link {
+            color: #94a3b8;
+            pointer-events: none;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .page-item:not(.active):not(.disabled) .page-link:hover {
+            z-index: 2;
+            color: #fff;
+            background-color: rgba(253, 230, 138, 0.2);
+            border-color: rgba(253, 230, 138, 0.3);
+        }
+
+        nav p.small {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Buku Tamu Digital</h1>
+        <h1>Buku Tamu Pictografest (</h1>
         <p class="subtitle">Silakan isi data diri Anda untuk mengisi buku tamu</p>
     </header>
 
@@ -304,6 +354,10 @@
                         Belum ada data tamu yang mengisi. Jadilah yang pertama!
                     </div>
                 @endforelse
+            </div>
+            
+            <div style="margin-top: 1rem;">
+                {{ $guestbooks->links('pagination::bootstrap-4') }}
             </div>
         </div>
     </div>
