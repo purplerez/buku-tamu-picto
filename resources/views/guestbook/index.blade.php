@@ -7,14 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #4f46e5;
-            --primary-hover: #4338ca;
-            --bg-color: #0f172a;
-            --text-color: #f8fafc;
-            --card-bg: rgba(30, 41, 59, 0.7);
-            --border-color: rgba(255, 255, 255, 0.1);
-            --input-bg: rgba(15, 23, 42, 0.6);
-            --input-border: rgba(255, 255, 255, 0.2);
+            --primary: #f59e0b;
+            --primary-hover: #d97706;
+            --bg-color: #7f1d1d;
+            --text-color: #fef3c7;
+            --card-bg: rgba(69, 10, 10, 0.7);
+            --border-color: rgba(253, 230, 138, 0.2);
+            --input-bg: rgba(69, 10, 10, 0.6);
+            --input-border: rgba(253, 230, 138, 0.3);
             --success: #10b981;
         }
 
@@ -26,7 +26,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, var(--bg-color) 0%, #1e1b4b 100%);
+            background: linear-gradient(135deg, var(--bg-color) 0%, #450a0a 100%);
             color: var(--text-color);
             min-height: 100vh;
             display: flex;
@@ -70,7 +70,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             text-align: center;
-            background: linear-gradient(to right, #818cf8, #c084fc);
+            background: linear-gradient(to right, #fde047, #f59e0b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 0.5rem;
@@ -78,14 +78,14 @@
 
         .subtitle {
             text-align: center;
-            color: #94a3b8;
+            color: #fde68a;
             margin-bottom: 2rem;
         }
 
         h2 {
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            color: #e2e8f0;
+            color: #fef3c7;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 0.5rem;
         }
@@ -98,7 +98,7 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
-            color: #cbd5e1;
+            color: #fde68a;
             font-size: 0.9rem;
         }
 
@@ -117,27 +117,27 @@
 
         input:focus, textarea:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
         }
 
         button {
             width: 100%;
             padding: 0.875rem;
-            background: linear-gradient(135deg, var(--primary) 0%, #6366f1 100%);
-            color: white;
+            background: linear-gradient(135deg, #fde047 0%, var(--primary) 100%);
+            color: #450a0a;
             border: none;
             border-radius: 0.5rem;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
+            box-shadow: 0 4px 14px 0 rgba(245, 158, 11, 0.39);
         }
 
         button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
-            background: linear-gradient(135deg, var(--primary-hover) 0%, #4f46e5 100%);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
         }
 
         .alert-success {
@@ -195,13 +195,13 @@
 
         .guest-card h3 {
             font-size: 1.1rem;
-            color: #f8fafc;
+            color: #fde047;
             margin-bottom: 0.25rem;
         }
 
         .guest-card .meta {
             font-size: 0.85rem;
-            color: #94a3b8;
+            color: #fde68a;
             margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
@@ -210,13 +210,13 @@
 
         .guest-card .address {
             font-size: 0.95rem;
-            color: #cbd5e1;
+            color: #fef3c7;
             line-height: 1.4;
         }
 
         .empty-state {
             text-align: center;
-            color: #64748b;
+            color: #fcd34d;
             padding: 2rem 0;
             font-style: italic;
         }
